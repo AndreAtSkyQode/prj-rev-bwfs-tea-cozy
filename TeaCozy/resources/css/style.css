@@ -1,0 +1,191 @@
+/*  CODECADEMY:   Building Websites From Scratch
+    UNIT:         04 (Days 14-16)
+    PROJECT:      "Teac Cozy"
+    DESCRIPTION:  An unguided project to review our lessons on the CSS3 Flexbox (Flexible Box Layout), CSS Dispaly & Position,
+                  and the Box Model.
+                  To see readme.txt for more details.
+    TOP TIPS:
+      1. Key Mindset to all CSS postitioning problems:
+            Important to break each component down into smaller components until you are working with a problem you've
+            seen before and know how to solve. This mindset is the key to all CSS positioning problems.
+*/
+
+/*GLOBAL SCOPE
+* ---------------
+*/
+body {
+  margin: 0px 0px;
+  font-size: 22px;
+  color: seashell;
+  background-color: black;
+  opacity: 0.6;
+}
+
+body,
+h1,
+h2 {
+  font-family: Helvetica;
+  text-align: center;
+}
+
+/*HEADER
+* ---------------
+*/
+header {          /*flex container to flex items .logo & .main-nav-bar*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 69px;
+  position: fixed;
+  top: 0px;           /*fixed, at 0px from the top of the viewport*/
+  width: 100%;        /*stretches full width of the containing element (i.e. body)*/
+  z-index: 5;
+  margin-top: 0px;
+  background-color: black;
+  border-bottom: 1px solid seashell;
+}
+.logo {             /*flex item to flex container header*/
+  height: 50px;     /*set/immutable height*/
+  width: 150px;     /*set/immutable width*/
+  margin: 0px 10px;
+}
+.logo img {
+  height: inherit;
+  width: inherit;
+}
+.main-nav-bar {   /*flex item to flex container header*/
+  display: flex;
+  width: 500px;
+  justify-content: flex-end;
+  margin: 0px 10px;
+}
+
+.main-nav-bar nav {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+.main-nav-bar a {
+  color: seashell;
+}
+
+/*MAIN SECTION
+* ---------------
+*/
+#mission,
+#featured,
+#locations {
+  padding-top: 70px;
+  margin: 20px 10px;
+  /*margin-bottom: 20px;*/
+  position: relative;
+  top: 70px;
+}
+
+.main {
+  /*margin: 20px 10px;*/
+  margin-bottom: 20px 10px;
+  z-index: 4;
+}
+
+.flex-container {   /*very handily can change any element into a flex-container*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column-direction { /*takes existing flex-container & makes it vertically directed*/
+  flex-direction: column;
+}
+
+.can-wrap {         /*takes existing flex-container and let it wrap its flex items*/
+  flex-wrap: wrap;
+}
+
+.top-section {
+  width: 1200px;
+  height: 700px;
+  margin: 0px 10px;
+  background-image: url("../images/img-mission-background.jpg");
+}
+.top-section .top-container {
+  display: block;
+  width: 100%;              /*stretches full width of .top-section container*/
+  margin: 10px 0px;
+  background-color: black;
+}
+
+.mid-section {
+  width: 1020px;      /*includes 20pixels for .mid-container left/right margins*/
+  min-height: 700px;  /*max-height is NOT set - thus height of this container grows as required*/
+  margin: 0px 10px;
+}
+.mid-section .mid-container {
+  width: 300px;
+  height: auto;/*220px*/
+  margin: 10px 15px;
+  align-items: flex-start;
+}
+.mid-container .img-with-subtitle img {
+  width: 300px;
+  height: 200px;
+  margin: 0px 0px;
+}
+.mid-container .img-with-subtitle h4 {
+  margin: 10px 0px 0px 0px;
+  padding: 0px 0px;
+}
+
+.btm-section {
+  width: 1200px;
+  min-height: 580px;  /*max-height is NOT set - thus height of this container grows as required*/
+  margin: 0px 10px;
+  background-image: url("../images/img-locations-background.jpg");
+  background-repeat: no-repeat;
+  justify-content: flex-start;
+}
+.btm-section h2 {
+  margin: 50px 0px 0px 0px;
+}
+
+.btm-section .btm-container {
+  background-color: black;
+  height: 300px;
+  width: 300px;
+  margin: 15px 20px;
+}
+.addresses {
+  margin: 0px 0px 0px 0px;
+}
+.address {
+  opacity: 0.9;
+}
+
+/*FOOTER
+* ---------------
+*/
+footer {
+  margin: 70px 10px 20px 10px;
+}
+.ftr-content {
+  width: 300px;
+  height: 200px;
+  margin: 0px 10px;
+}
+
+/*COPYRIGHT
+* ---------------
+*/
+.copyright {
+  text-align: left;
+  height: 1000px;    /*to ensure enough room to scroll up so div.btm-section lines up tightly below header (e.g. when clicking on 'Locations' in nav-bar)*/
+  margin: 0px 20px;
+}
+
+/* TROUBLESHOOTING
+ * ---------------
+ */
+/*To Outline an item - COMMENT OUT WHEN READY*//*
+.box {
+  border: 1px dotted seashell;
+}*/

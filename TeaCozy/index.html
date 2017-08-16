@@ -1,0 +1,154 @@
+<!--CODECADEMY:   Building Websites From Scratch
+    UNIT:         04 (Days 14-16)
+    PROJECT:      "Teac Cozy"
+    DESCRIPTION:  An unguided project to review our lessons on the CSS3 Flexbox (Flexible Box Layout), CSS Dispaly & Position,
+                  and the Box Model.
+                  To see readme.txt for more details.
+    TOP TIPS:
+      1. Key Mindset to all CSS postitioning problems:
+            Important to break each component down into smaller components until you are working with a problem you've
+            seen before and know how to solve. This mindset is the key to all CSS positioning problems.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Tea Cozy</title>
+  <link href="./resources/css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <!--HEADER part-->
+  <header class="box">
+    <div class="logo box">
+      <img src="./resources/images/img-tea-cozy-logo.png" alt="Tea Cozy logo" />
+    </div>
+    <div class="main-nav-bar box">
+      <nav class="box">
+        <a href="#mission" class="box">Mission</a>
+        <a href="#featured" class="box">Featured Tea</a>
+        <a href="#locations" class="box">Locations</a>
+      </nav>
+    </div>
+  </header>
+
+  <!--MAIN: i.e. content of website-->
+  <div class="main">
+
+    <!--Top part of main content-->
+    <div id="mission" class="flex-container box">
+      <div class="top-section flex-container box">
+        <div class="top-container">
+          <h2>Our Mission</h2>
+          <h4>Handpicked, Artisanally Curated, Free Range, Sustainable, Small Batch, Fair Trade, Organic Tea</h4>
+        </div>
+      </div>
+    </div>  <!--e/o #mission-->
+
+    <!--Middle part of main content-->
+    <div id="featured" class="flex-container box">
+      <div class="mid-section flex-container column-direction box">
+
+        <!--header-->
+        <div>
+          <h2>Tea of The Month</h2>
+          <h4>What's Steeping at The Tea Cozy?</h4>
+        </div>
+
+        <!--featured content: 1no flex-container wrapping 5no nested flex-containers to fit viewport-->
+        <div class="flex-container can-wrap box">
+          <div class="mid-container flex-container box">
+            <div class="img-with-subtitle">
+              <img src="./resources/images/img-berryblitz.jpg"/>
+              <h4>Fall Berry Blitz Tea</h4>
+            </div>
+          </div>
+          <div class="mid-container flex-container box">
+            <div class="img-with-subtitle">
+              <img src="./resources/images/img-spiced-rum.jpg"/>
+              <h4>Spiced Rum Tea</h4>
+            </div>
+          </div>
+          <div class="mid-container flex-container box">
+            <div class="img-with-subtitle">
+              <img src="./resources/images/img-donut.jpg"/>
+              <h4>Seasonal Donuts</h4>
+            </div>
+          </div>
+          <div class="mid-container flex-container box">
+            <div class="img-with-subtitle">
+              <img src="./resources/images/img-myrtle-ave.jpg"/>
+              <h4>Myrtle Ave Tea</h4>
+            </div>
+          </div>
+          <div class="mid-container flex-container box">
+            <div class="img-with-subtitle">
+              <img src="./resources/images/img-bedford-bizarre.jpg"/>
+              <h4>Bedford Bizarre Tea</h4>
+            </div>
+          </div>
+
+        </div>  <!--e/o .flex-container.can-wrap-->
+      </div>  <!--e/o .mid-section-->
+    </div>  <!--e/o #featured-->
+
+    <!--Bottom part of main content-->
+    <div id="locations" class="flex-container box">
+      <!--2no containers (to house a heading & 3 address, respectively)-->
+      <div class="btm-section flex-container column-direction box">
+
+        <!--heading-->
+        <div class="box">
+          <h2>Locations</h2>
+        </div>
+
+        <!--3 addresses (that can wrap)-->
+        <div class="addresses flex-container can-wrap box">
+          <!--address 1-->
+          <div class="btm-container flex-container box">
+            <div class="address flex-container column-direction box">
+              <h3>Downtown</h3>
+              <p>384 West 4th St</p>
+              <p>Suite 108</p>
+              <p>Portland, Maine</p>
+            </div>
+          </div>
+          <!--address 2-->
+          <div class="btm-container flex-container box">
+            <div class="address flex-container column-direction box">
+              <h3>East Bayside</h3>
+              <p>3433 Phisherman's Avenue</p>
+              <p>(Northwest Corner)</p>
+              <p>Portland, Maine</p>
+            </div>
+          </div>
+          <!--address 3-->
+          <div class="btm-container flex-container box">
+            <div class="address flex-container column-direction box">
+              <h3>Oakdale</h3>
+              <p>515 Crescent Avenue</p>
+              <p>Second Floor</p>
+              <p>Portland, Maine</p>
+            </div>
+          </div>
+        </div>  <!--e/o 3 address-->
+      </div>  <!--e/o .btm-section-->
+    </div>  <!--e/o #locations-->
+
+  </div>  <!--e/o .main-->
+
+  <!--FOOTER: a simple footer-->
+  <footer class="flex-container box">
+    <div class="ftr-content box">
+      <h2>The Tea Cozy</h2>
+      <h5>contact@theteacozy.com</h5>
+      <h5>917-555-8904</h5>
+    </div>
+  </footer>
+
+  <!--COPYRIGHT part-->
+  <div class="copyright box">
+    <p>copyright The Tea Cozy 2017</p>
+  </div>
+
+</body>
+</html
